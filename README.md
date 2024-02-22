@@ -1,1 +1,2 @@
-#My NEOVIM Config.
+## My NEOVIM Config.
+Based on KickStart.nvim
