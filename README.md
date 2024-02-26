@@ -1,2 +1,2 @@
 ## My NEOVIM Config.
-Based on KickStart.nvim
+Trying to create my own config from scratch to learn more abot Nvim.
