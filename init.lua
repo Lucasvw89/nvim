@@ -3,6 +3,11 @@ vim.g.mapleader = " "
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.bo.softtabstop = 4
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -16,17 +21,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
+require("lazy").setup("plugins")
 
-    require("telescope"),
-
-    {'williamboman/mason.nvim', opts = {}},
-    {'williamboman/mason-lspconfig.nvim', opts = {}, ensure_installed = {"lua_ls"}},
-    {
-	    'neovim/nvim-lspconfig',
-	    config = function(server)
-		    require("lspconfig").lua_ls.setup {}
-	    end
-    },
-})
-
+vim.cmd.colorscheme "catppuccin"
