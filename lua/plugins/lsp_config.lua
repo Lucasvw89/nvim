@@ -15,6 +15,10 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "clangd",
+                "pyright",
+                "jdtls",
+                "vtsls",
+                "hdl_checker",
             },
             handlers = {
                 function (server)
