@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<leader>qq", ":wqa!<CR>", {})
 
-vim.keymap.set("n", ";", ":", {})
+vim.keymap.set({"n", "v"}, ";", ":", {})
 vim.keymap.set({"n", "v", "i"}, "<C-c>", "<Esc>", {})
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", {})
