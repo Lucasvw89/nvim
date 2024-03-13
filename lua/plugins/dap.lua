@@ -46,5 +46,8 @@ return {
         dap.configurations.cpp = c_cpp_rust_config
         dap.configurations.rust = c_cpp_rust_config
 
+
+        vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", {})
+
     end
 }
