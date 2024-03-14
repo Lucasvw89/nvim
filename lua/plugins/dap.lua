@@ -2,6 +2,10 @@ return {
     "mfussenegger/nvim-dap",
     dependencies = {
         "rcarriga/nvim-dap-ui",
+        {
+            "williamboman/mason.nvim",
+            ensure_installed = { "cpptools" }
+        },
     },
     config = function ()
         local dap = require("dap")
@@ -22,25 +26,26 @@ return {
           dapui.close()
         end
 
-        --adapters
-        dap.adapters.gdb = {
+        dap.adapters.cppdbg = {
           type = "executable",
-          command = "gdb",
-          args = { "-i", "dap" }
-        }
-
-        local c_cpp_rust_config = {
-          {
-            name = "Launch",
-            type = "gdb",
-            request = "launch",
-            program = function()
-              return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-            end,
-            cwd = "${workspaceFolder}",
-            stopAtBeginningOfMainSubprogram = false,
+          id = "cppdbg",
+          command = "C:\\Users\\lucas\\AppData\\Local\\nvim-data\\mason\\packages\\cpptools\\extension\\debugAdapters\\bin\\OpenDebugAD7.exe",
+          options = {
+            detached = false,
           },
         }
+        local c_cpp_rust_config = {
+          {
+            name = "Debug C/C++ g++.exe",
+            type = "cppdbg",
+            request = "launch",
+            program = function()
+              return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+            end,
+            cwd = vim.fn.getcwd(),
+          },
+        }
+
 
         dap.configurations.c = c_cpp_rust_config
         dap.configurations.cpp = c_cpp_rust_config
@@ -48,6 +53,9 @@ return {
 
 
         vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", {})
+        vim.keymap.set("n", "<leader>dc", ":DapContinue<CR>", {})
 
     end
+
 }
+
