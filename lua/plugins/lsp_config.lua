@@ -19,6 +19,8 @@ return {
                 "jdtls",
                 "vtsls",
                 "hdl_checker",
+                "html",
+                "cssls",
             },
             handlers = {
                 function (server)
