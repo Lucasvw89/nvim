@@ -4,7 +4,7 @@ vim.api.nvim_create_user_command('ConfigFiles',
         if curr_os == "Windows_NT" then
             require('telescope.builtin').find_files({ cwd = "~\\AppData\\Local\\nvim" })
         else
-            require('telescope.builtin').find_files({ cwd = "~/config/nvim" })
+            require('telescope.builtin').find_files({ cwd = "~/.config/nvim" })
         end
     end,
   {}

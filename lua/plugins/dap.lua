@@ -26,14 +26,23 @@ return {
           dapui.close()
         end
 
-        dap.adapters.cppdbg = {
-          type = "executable",
-          id = "cppdbg",
-          command = "C:\\Users\\lucas\\AppData\\Local\\nvim-data\\mason\\packages\\cpptools\\extension\\debugAdapters\\bin\\OpenDebugAD7.exe",
-          options = {
-            detached = false,
-          },
-        }
+        local curr_os = vim.loop.os_uname().sysname
+        if curr_os == "Windows_NT" then
+            dap.adapters.cppdbg = { type = "executable",
+              id = "cppdbg",
+              command = vim.env.HOME .. "\\AppData\\Local\\nvim-data\\mason\\packages\\cpptools\\extension\\debugAdapters\\bin\\OpenDebugAD7.exe",
+              options = {
+                detached = false,
+              },
+            }
+        else
+            dap.adapters.cppdbg = {
+              type = "executable",
+              id = "cppdbg",
+              command = vim.env.HOME .. "/.config/nvim-data/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7.exe",
+            }
+        end
+
         local c_cpp_rust_config = {
           {
             name = "Debug C/C++ g++.exe",
