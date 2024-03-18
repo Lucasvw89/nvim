@@ -63,6 +63,8 @@ return {
 
         vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", {})
         vim.keymap.set("n", "<leader>dc", ":DapContinue<CR>", {})
+        vim.keymap.set("n", "<leader>dso", ":DapStepOver<CR>", {})
+        vim.keymap.set("n", "<leader>dsi", ":DapStepInto<CR>", {})
 
     end
 

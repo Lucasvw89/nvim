@@ -20,5 +20,6 @@ return {
         vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
         vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find, {})
         vim.keymap.set('n', '<leader>fc', ':ConfigFiles<CR>', {})
+        vim.keymap.set("n", "<leader>ft", builtin.commands, {})
     end,
 }
