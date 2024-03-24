@@ -4,7 +4,7 @@ return {
     priority = 1000,
     opts = {
         flvaour = "mocha",
-        transparent_background = true,
+        transparent_background = false,
         dim_inactive = {
             enabled = false,
             shade = "dark",
