@@ -3,6 +3,7 @@ vim.keymap.set("n", "<leader>qq", ":wqa!<CR>", {})
 
 vim.keymap.set({"n", "v"}, ";", ":", {})
 vim.keymap.set({"n", "v", "i"}, "<C-c>", "<Esc>", {})
+vim.keymap.set({"t"}, "<C-x>", "<C-\\><C-n>", {})
 
 -- windows and terminals
 -- move around
