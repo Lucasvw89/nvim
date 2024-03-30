@@ -21,6 +21,7 @@ return {
                 "hdl_checker",
                 "html",
                 "cssls",
+                "dockerls",
             },
             handlers = {
                 function (server)
