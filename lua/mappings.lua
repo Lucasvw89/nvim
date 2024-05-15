@@ -12,6 +12,9 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", {})
 vim.keymap.set("n", "<C-k>", "<C-w>k", {})
 vim.keymap.set("n", "<C-l>", "<C-w>l", {})
 
+vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
+vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
+
 -- split windows
 vim.keymap.set("n", "<leader>h", ":split<CR> | <C-w>= | <C-w>j", {})
 vim.keymap.set("n", "<leader>v", ":vsplit<CR> | <C-w>= | <C-w>l", {})
