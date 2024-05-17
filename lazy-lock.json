@@ -21,6 +21,7 @@
   "nvim-nio": { "branch": "master", "commit": "173f285eebb410199273fa178aa517fd2d7edd80" },
   "nvim-treesitter": { "branch": "master", "commit": "54cf9180a36299265e217858e6e531245074c3f4" },
   "nvim-web-devicons": { "branch": "master", "commit": "3ee60deaa539360518eaab93a6c701fe9f4d82ef" },
+  "onedarkpro.nvim": { "branch": "main", "commit": "5cf25dd6db58c6eb1cec47ad333e2b76051f8562" },
   "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
   "telescope.nvim": { "branch": "master", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" },
   "vim-fugitive": { "branch": "master", "commit": "c0b03f1cac242d96837326d300f42a660306fc1a" }
