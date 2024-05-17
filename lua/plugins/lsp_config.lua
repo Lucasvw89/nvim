@@ -18,7 +18,6 @@ return {
                 "pyright",
                 "jdtls",
                 "vtsls",
-                "hdl_checker",
                 "html",
                 "cssls",
                 "dockerls",
