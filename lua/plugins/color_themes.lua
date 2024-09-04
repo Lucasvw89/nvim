@@ -5,10 +5,10 @@ return {
         priority = 1000,
         opts = {
             flvaour = "mocha",
-            transparent_background = true,
+            transparent_background = false,
             dim_inactive = {
                 enabled = false,
-                shade = "dark",
+                shade = "blue",
                 percentage = 0.15,
             },
         },
@@ -21,5 +21,9 @@ return {
                 transparency = true,
             },
         },
+    },
+    {
+        "AstroNvim/astrotheme",
+        opts = {},
     }
 }
