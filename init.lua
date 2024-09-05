@@ -60,7 +60,8 @@ require("lazy").setup("plugins", {
     }
 })
 
-vim.cmd("colorscheme astrodark")
+vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme astrodark")
 -- vim.cmd.colorscheme "catppuccin"
 -- vim.cmd.colorscheme "onedark_dark"
 -- vim.cmd.colorscheme "onelight"

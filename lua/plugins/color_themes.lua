@@ -25,5 +25,9 @@ return {
     {
         "AstroNvim/astrotheme",
         opts = {},
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
     }
 }
