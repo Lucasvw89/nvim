@@ -17,9 +17,11 @@ return {
     config = function()
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-        vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+        -- vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
         vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find, {})
         vim.keymap.set('n', '<leader>fc', ':ConfigFiles<CR>', {})
         vim.keymap.set("n", "<leader>ft", builtin.commands, {})
+        vim.keymap.set("n", "<leader>fcs", builtin.grep_string, {})
+        vim.keymap.set("n", "<leader>fs", builtin.live_grep, {})
     end,
 }
