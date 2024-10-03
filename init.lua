@@ -9,7 +9,12 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.bo.softtabstop = 4
 
+vim.opt.hlsearch = false
+vim.opt.scrolloff = 8
+
 vim.opt.undofile = true
+
+vim.opt.laststatus = 3
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
