@@ -25,7 +25,7 @@ return {
             handlers = {
                 function (server)
                     require("lspconfig")[server].setup {
-                        cpabilities = require("cmp_nvim_lsp").default_capabilities()
+                        capabilities = require("cmp_nvim_lsp").default_capabilities()
                     }
                 end,
             },
@@ -50,7 +50,9 @@ return {
                    }
             })
 
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+            vim.keymap.set('n', 'rn', vim.lsp.buf.rename, {})
 
         end
     },

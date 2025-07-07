@@ -67,9 +67,19 @@ require("lazy").setup("plugins", {
     }
 })
 
-vim.cmd("colorscheme rose-pine")
+local virtual_text_enabled = true
+vim.diagnostic.config({ virtual_text = virtual_text_enabled })
+
+function ToggleVirtualText()
+  virtual_text_enabled = not virtual_text_enabled
+  vim.diagnostic.config({ virtual_text = virtual_text_enabled })
+end
+
+vim.api.nvim_set_keymap('n', '<leader>tv', ':lua ToggleVirtualText()<CR>', { noremap = true, silent = true })
+
+-- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme astrodark")
--- vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "catppuccin"
 -- vim.cmd.colorscheme "onedark_dark"
 -- vim.cmd.colorscheme "onelight"
 
