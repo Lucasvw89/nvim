@@ -34,5 +34,15 @@ return {
                 transparency = true;
             }
         }
+    },
+    {
+        "Shatur/neovim-ayu",
+        config = function ()
+            require('lualine').setup({
+              options = {
+                theme = 'ayu',
+              },
+            })
+        end
     }
 }

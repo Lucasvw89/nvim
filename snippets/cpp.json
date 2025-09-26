@@ -1,0 +1,57 @@
+{
+    "comp": {
+        "prefix": "comp",
+        "body": [
+            "#ifdef ONPC",
+            "    #define _GLIBCXX_DEBUG",
+            "#endif",
+            "",
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "#define char unsigned char",
+            "#define ll long long",
+            "#define ld long double",
+            "mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());",
+            "",
+            "",
+            "int32_t main() {",
+            "    ios::sync_with_stdio(0);",
+            "    cin.tie(0);",
+            "",
+            "    $0",
+            "",
+            "    #ifdef ONPC",
+            "        cerr << endl << \"finished in \" << clock() * 1.0 / CLOCKS_PER_SEC << \" sec\" << endl;",
+            "    #endif",
+            "    return 0;",
+            "}"
+        ],
+        "description": "comp snippet"
+    },
+    "t_times": {
+        "prefix": "tt",
+        "body": [
+            "int ${1:cases}; cin >> $1;",
+            "while ($1--) {",
+            "    $0",
+            "}"
+        ],
+        "description": "binary search"
+    },
+    "bin_search": {
+        "prefix": "bins",
+        "body": [
+            "// array is ${1:arr} || target is ${2:target}",
+            "int bl = 0, br = $1.size() - 1;",
+            "int bmid;",
+            "while (bl <= br) {",
+            "    bmid = bl + ((br - bl) >> 1);",
+            "    if ($2 == $1[bmid]) { break; }",
+            "    else if ($2 < $1[bmid]) br = bmid - 1;",
+            "    else bl = bmid + 1;",
+            "}"
+        ],
+        "description": "binary search"
+    }
+} 
